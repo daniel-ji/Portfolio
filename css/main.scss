@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'anurati';
+  src: url('../fonts/Anurati-Regular.otf');
+}
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden !important;
+}
+
+canvas {
+  width: 100vw !important;
+  height: 100vh !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #002755;
+  z-index: 99;
+
+  p {
+    position: relative;
+    font-size: 32px;
+    font-family: 'Be Vietnam';
+    cursor: pointer;
+    transition: 1s;
+    color: white;
+    z-index: 101;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-bottom: 3px solid white;
+      width: 0;
+    }
+    &:hover:after {
+      width: 100%;
+      transition: .5s;
+    }
+  }
+}
+
+.page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.menu {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2vw;
+  z-index: 100;
+  transition: 0.75s;
+  cursor: pointer;
+  filter: invert(1);
+
+  &:hover {
+    height: 35px;
+    width: 35px;
+  }
+}
+
+.home {
+  box-sizing: border-box;
+  padding: 0 8vw 20vh 5vw;
+  justify-content: space-between;
+  align-items: center;
+
+  .profile {
+    position: relative;
+    top: 2.5vw;
+    width: 20vw;
+    height: 20vw;
+    border: 2px grey;
+    border-radius: 0.75vw;
+  }
+
+  .text {
+    display: flex;
+    height: 20vw;
+    flex-direction: column;
+    color: white;
+
+    .title {
+      margin: 0;
+      height: 100px;
+      font-family: 'Mukta';
+      font-size: 80px;
+    }
+    .subtitle {
+      margin: 0;
+      font-family: 'Be Vietnam';
+      font-size: 40px;
+    }
+
+    .typed-cursor {
+      width: 0px;
+      height: 0px;
+      visibility: hidden;
+    }
+
+  }
+}

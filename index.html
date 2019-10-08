@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/please-wait.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Be+Vietnam|Mukta&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/actualcss/main.min.css">
+  <link rel="icon" href="css/images/icon.png">
+  <title>Daniel Ji</title>
+  <style>
+    body > .inner {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="inner">
+    <img class="menu open" src="css/images/menu.png">
+
+      <div class="nav animated" style="display: none;">
+        <p id="home">Home</p>
+        <p id="about">About Me</p>
+        <p id="project">Projects</p>
+        <p id="resume">Resume</p>
+        <p id="contact">Contact</p>
+      </div>
+
+    <div class="page home">
+      <header class="text">
+        <p class="title"></p>
+        <p class="subtitle"></p>
+      </header>
+    </div>
+    <div class="page about">
+    </div>
+    <div class="page project">
+    </div>
+    <div class="page resume">
+    </div>
+    <div class="page contact">
+    </div>
+  </div>
+
+  <script src="js/please-wait.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+  <script src="js/three.min.js"></script>
+  <script src="js/vanta.net.min.js"></script>
+  <script src="js/particles.min.js"></script>
+  <script>
+  VANTA.NET({
+    el: ".home",
+    color: 0xffffff,
+    backgroundColor: 0x2755,
+    points: 11.00
+  })
+  </script>
+  <script defer src="js/main.js"></script>
+</body>
+</html>
