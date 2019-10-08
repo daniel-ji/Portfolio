@@ -1,9 +1,3 @@
-var loading_screen = pleaseWait({
-  logo: "../css/images/logo.png",
-  backgroundColor: '#002755',
-  loadingHtml: '<div class="spinner"><div class="cube1"></div><div class="cube2"></div></div>'
-});
-
 $('.nav, .home, .about, .resume, .project, .contact').hide();
 
 $(document).ready(function() {
@@ -31,12 +25,12 @@ $(document).ready(function() {
     if ($('.nav').hasClass('slideInDown')) {
       $('.nav').removeClass('slideInDown');
       $('.nav').addClass('slideOutUp');
-      $('.menu').attr("src", "../css/images/menu.png");
+      $('.menu').attr("src", "/css/images/menu.png");
     } else {
       $('.nav').removeClass('slideOutUp');
       $('.nav').addClass('slideInDown');
       $('.nav').show();
-      $('.menu').attr("src", "../css/images/close.png");
+      $('.menu').attr("src", "/css/images/close.png");
     }
   });
 
