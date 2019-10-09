@@ -6,6 +6,7 @@ body {
   margin: 0;
   height: 100vh;
   overflow: hidden !important;
+  background-color: black;
 }
 
 canvas {
@@ -29,6 +30,7 @@ canvas {
   right: 0;
   background-color: #002755;
   z-index: 99;
+  transition: 1s;
 
   p {
     position: relative;
@@ -61,6 +63,10 @@ canvas {
   position: absolute;
   top: 0;
   right: 0;
+  box-sizing: border-box;
+  padding: 10vh 8vw 0 5vw;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .menu {
@@ -82,10 +88,7 @@ canvas {
 }
 
 .home {
-  box-sizing: border-box;
-  padding: 0 8vw 20vh 5vw;
-  justify-content: space-between;
-  align-items: center;
+  padding-top: 20vh;
 
   .profile {
     position: relative;
@@ -95,30 +98,29 @@ canvas {
     border: 2px grey;
     border-radius: 0.75vw;
   }
+}
 
-  .text {
-    display: flex;
-    height: 20vw;
-    flex-direction: column;
-    color: white;
+.text {
+  display: flex;
+  height: 20vw;
+  flex-direction: column;
+  color: white;
 
-    .title {
-      margin: 0;
-      height: 100px;
-      font-family: 'Mukta';
-      font-size: 80px;
-    }
-    .subtitle {
-      margin: 0;
-      font-family: 'Be Vietnam';
-      font-size: 40px;
-    }
+  .title {
+    margin: 0;
+    height: 100px;
+    font-family: 'Mukta';
+    font-size: 80px;
+  }
+  .subtitle {
+    margin: 0;
+    font-family: 'Be Vietnam';
+    font-size: 40px;
+  }
 
-    .typed-cursor {
-      width: 0px;
-      height: 0px;
-      visibility: hidden;
-    }
-
+  .typed-cursor {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
   }
 }
