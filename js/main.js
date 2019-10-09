@@ -52,16 +52,18 @@ $(document).ready(function() {
   function openOneCloseLast(openClassName, closeClassName) {
     if (openClassName != closeClassName) {
       navHide();
-      $(`.${closeClassName}`).removeClass('slideInLeft');
-      $(`.${closeClassName}`).addClass('slideOutRight');
-      $(`.${openClassName}`).removeClass('slideOutRight');
-      $(`.${openClassName}`).addClass('slideInLeft');
-      $(`.${openClassName}`).show();
+      setTimeout(()=>{
+        $(`.${closeClassName}`).removeClass('slideInDown');
+        $(`.${closeClassName}`).addClass('slideOutDown');
+        $(`.${openClassName}`).removeClass('slideOutDown');
+        $(`.${openClassName}`).addClass('slideInDown');
+        $(`.${openClassName}`).show();
+      }, 200);
 
       for (let i = 0; i < classList[0].length; i++) {
         if (openClassName != classList[0][i] && closeClassName != classList[0][i]) {
-          $(`.${classList[0][i]}`).removeClass('slideInLeft');
-          $(`.${classList[0][i]}`).removeClass('slideOutRight');
+          $(`.${classList[0][i]}`).removeClass('slideInDown');
+          $(`.${classList[0][i]}`).removeClass('slideOutDown');
           $(`.${classList[0][i]}`).hide();
         } else if (openClassName == classList[0][i]) {
           $('body').css('background-color', classList[2][i]);
@@ -75,10 +77,10 @@ $(document).ready(function() {
             });
             $('canvas').hide();
             $('canvas').fadeIn();
-          }, 1000);
+          }, 1600);
 
           //setTimeout(()=>{$('canvas').fadeIn();}, 2000);
-          setTimeout(() => {$('.nav').css('background-color', classList[2][i]);}, 500);
+          setTimeout(() => {$('.nav').css('background-color', classList[2][i]);}, 800);
         }
       }
     } else {
