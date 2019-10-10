@@ -8,7 +8,9 @@ body {
   overflow: hidden !important;
   background-color: black;
 }
-
+a {
+  color: inherit;
+}
 canvas {
   width: 100vw !important;
   height: 100vh !important;
@@ -54,6 +56,24 @@ canvas {
       transition: .5s;
     }
   }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 10vh;
+
+    a {
+      filter: invert(1);
+    }
+    
+    img {
+      margin: 0 0 3vh 3vw;
+      height: 5vh;
+      width: 5vh;
+    }
+  }
 }
 
 .page {
@@ -64,7 +84,7 @@ canvas {
   top: 0;
   right: 0;
   box-sizing: border-box;
-  padding: 10vh 8vw 0 5vw;
+  padding: 10vh 8vw 0 4vw;
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -98,11 +118,14 @@ canvas {
     border: 2px grey;
     border-radius: 0.75vw;
   }
+
+  .text {
+    height: 20vw;
+  }
 }
 
 .text {
   display: flex;
-  height: 20vw;
   flex-direction: column;
   color: white;
 
@@ -123,4 +146,203 @@ canvas {
     height: 0px;
     visibility: hidden;
   }
+}
+
+.resume {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  canvas {
+    opacity: 0.6;
+  }
+  .content {
+    font-family: 'Be Vietnam';
+    font-size: 16px;
+    color: white;
+  }
+}
+
+.about {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  canvas {
+    opacity: 0.7;
+  }
+  .text {
+    height: auto;
+  }
+  .profile {
+    margin-top: 2vw;
+    width: 310px;
+    height: 310px;
+    border-radius: 2vw;
+  }
+  .description {
+    margin: 5vh 0 0 4vw;
+    color: white;
+    font-size: 24px;
+    font-family: 'Be Vietnam';
+  }
+  .content {
+    display: inline-flex;
+  }
+}
+
+.project {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  header {
+
+  }
+  .grid {
+    display: inline-flex;
+    margin-top: 3vw;
+    width: 80vw;
+    height: 50vw;
+
+    .box {
+      margin: 0 4vw 0 0;
+      width: 20vw;
+      height: 20vw;
+      border-radius: 1.5vw;
+      animation: hover-effect 1.5s infinite;
+      z-index: 2;
+
+      @keyframes hover-effect {
+        0% {
+          -webkit-box-shadow: 10px 10px 12px 0px rgba(0,106,163,1);
+          -moz-box-shadow: 10px 10px 12px 0px rgba(0,106,163,1);
+          box-shadow: 10px 10px 12px 0px rgba(0,106,163,1);
+        }
+        50% {
+          -webkit-box-shadow: 10px 10px 20px 0px rgba(0,106,163,1);
+          -moz-box-shadow: 10px 10px 20px 0px rgba(0,106,163,1);
+          box-shadow: 10px 10px 20px 0px rgba(0,106,163,1);
+        }
+        100% {
+          -webkit-box-shadow: 10px 10px 12px 0px rgba(0,106,163,1);
+          -moz-box-shadow: 10px 10px 12px 0px rgba(0,106,163,1);
+          box-shadow: 10px 10px 12px 0px rgba(0,106,163,1);
+        }
+      }
+
+      img {
+        border-radius: 1.5vw;
+        width: 20vw;
+        height: 20vw;
+        z-index: 1;
+      }
+      .expand {
+        border-radius: 6px;
+        color: white;
+        background-color: #1E88E5;
+        padding: 8px 4px 8px 4px;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: 'Be Vietnam';
+        position: relative;
+        top: -10%;
+        width: 15vw;
+        margin: 0 2.5vw 0 2.5vw;
+        text-align: center;
+        cursor: pointer;
+      }
+      .content {
+        color: white;
+        font-family: 'Be Vietnam';
+        position: absolute;
+        top: 10%;
+        width: 15vw;
+        margin: 2.5vw 2.5vw 0 2.5vw;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.contact {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .contactForm {
+      position: relative;
+      right: 0.75vw;
+      width: 51.5vw;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 2vw 0 0 0;
+      z-index: 2;
+
+      input, textarea {
+        margin-bottom: 2vh;
+        width: 50vw;
+        border: 0;
+        box-sizing: border-box;
+        padding: .75vw;
+        color: black;
+        font-family: 'Mukta';
+        font-size: 13px;
+        transition: .5s;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        &:focus {
+          outline: none;
+          transition: 0;
+        }
+        &::placeholder {
+          font-family: 'Mukta';
+        }
+        &:hover {
+          box-shadow: 0 5px 8px 0 rgba(0,0,0,0.24), 0 10px 25px 0 rgba(0,0,0,0.19);
+        }
+      }
+
+      .messageinput {
+        height: 30vh;
+        max-height: 30vh;
+      }
+      .confirmArea {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        width: 50vw;
+        height: 5vh;
+
+        .sendinputs {
+          margin: 0 0.5vw 0 0;
+          width: 8.5vw;
+          height: 5vh;
+          background-color: white;
+          transition: .5s;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #eee;
+          }
+          &:active {
+            background-color: white;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+          }
+        }
+        .sent {
+          margin: 0;
+          border-radius: 50%;
+          width: 25px;
+          height: 25px;
+          transition: .5s;
+        }
+      }
+    }
 }

@@ -1,6 +1,8 @@
 $('.nav, .home, .about, .resume, .project, .contact').hide();
 
 $(document).ready(function() {
+  $('.sent').hide();
+  $('.box .content, .box .expand').hide();
   let currentClass = 'home';
   VANTA.NET({
     el: `.${currentClass}`,
@@ -12,6 +14,32 @@ $(document).ready(function() {
   //loading stuff
   loading_screen.finish();
   $('body > .inner').css('display', 'block');
+
+  let counter = 0;
+  if (!$('input').is(':focus')) {
+    $(document).keydown(function(e) {
+      if (e.key == 'Escape') {
+        navHide();
+      } else if (e.key == 'b') {
+        counter++;
+      } else if (e.key == 't') {
+        if (counter == 1) {
+          counter++;
+        }
+      } else if (e.key == 'c') {
+        if (counter == 2) {
+          counter = 0;
+          window.open('https://bitcoin.org', '_blank');
+        }
+      }
+    });
+    $(document).keyup(function(e) {
+      if (e.key == 'b'|| e.key == 't' || e.key == 'c') {
+        counter = 0;
+      }
+    });
+  }
+
   //particlesJS.load('particles-js', '../js/particlesjs-config.json');
   $('.home').show();
   let options = {
@@ -28,15 +56,11 @@ $(document).ready(function() {
   const classList = [['home', 'about', 'resume', 'contact', 'project'], [0x002755, 0x205c80, 0x068eb8, 0x004463, 0x1E88E5], ['#002755', '#205c80', '#068eb8', '#004463', ' #1E88E5']];
 
   //nav event listeners
-
   $('.menu').click(() => {
     if ($('.nav').hasClass('slideInDown')) {
       navHide();
     } else {
-      $('.nav').removeClass('slideOutUp');
-      $('.nav').addClass('slideInDown');
-      $('.nav').show();
-      $('.menu').attr("src", "../portfolio/css/images/close.png");
+      navShow();
     }
   });
 
@@ -47,6 +71,13 @@ $(document).ready(function() {
       currentClass = classList[0][i];
     });
   }
+
+  //project section
+  $('.box').hover(function() {
+    $(this).children('.expand').fadeIn();
+  }, function() {
+    $(this).children('.expand').fadeOut();
+  });
 
   //functions for nav
   function openOneCloseLast(openClassName, closeClassName) {
@@ -77,7 +108,7 @@ $(document).ready(function() {
             });
             $('canvas').hide();
             $('canvas').fadeIn();
-          }, 1600);
+          }, 1150);
 
           //setTimeout(()=>{$('canvas').fadeIn();}, 2000);
           setTimeout(() => {$('.nav').css('background-color', classList[2][i]);}, 800);
@@ -92,7 +123,12 @@ $(document).ready(function() {
     $('.nav').addClass('slideOutUp');
     $('.menu').attr("src", "../portfolio/css/images/menu.png");
   }
-
+  function navShow() {
+    $('.nav').removeClass('slideOutUp');
+    $('.nav').addClass('slideInDown');
+    $('.nav').show();
+    $('.menu').attr("src", "../portfolio/css/images/close.png");
+  }
 
 
   /*

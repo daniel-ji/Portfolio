@@ -6,7 +6,7 @@
   <link href="https://fonts.googleapis.com/css?family=Be+Vietnam|Mukta&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/actualcss/main.min.css">
-  <link rel="icon" href="css/images/danielpfp.png">
+  <link rel="icon" href="css/images/daniel.png">
   <title>Daniel Ji</title>
   <style>
     body > .inner {
@@ -18,13 +18,19 @@
   <div class="inner">
     <img class="menu open" src="css/images/menu.png">
 
-      <div class="nav animated" style="display: none;">
-        <p id="home">Home</p>
-        <p id="about">About Me</p>
-        <p id="project">Projects</p>
-        <p id="resume">Résumé</p>
-        <p id="contact">Contact</p>
-      </div>
+    <div class="nav animated" style="display: none;">
+      <p id="home">Home</p>
+      <p id="about">About Me</p>
+      <p id="project">Projects</p>
+      <p id="resume">Résumé</p>
+      <p id="contact">Contact</p>
+
+      <footer>
+        <a href="mailto: jidaniel1234@gmail.com" target="_blank"><img alt="email" title="connect to me with email!" src="css/images/email.png"></img></a>
+        <a href="https://www.facebook.com/XDanielJiJi" target="_blank"><img alt="facebook" title="connect to me with Facebook!" src="css/images/facebook.svg"></img></a>
+        <img alt="facebook" title="connect to us with Facebook!" src="css/images/whs.png" style="width: 6vh;"></img>
+      </footer>
+    </div>
 
     <div class="page animated home">
       <header class="text">
@@ -36,24 +42,84 @@
       <header class="text">
         <p class="title">About Me</p>
       </header>
+      <div class="content">
+        <img class="profile" src="css/images/daniel.png"></img>
+        <p class="description">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hi, I’m a sophomore that attends <a href="https://www.walnuths.net">Walnut High School<a/>. At Walnut High, I’m part of the JV basketball team as well as various clubs such as Cybersecurity, Robotics, and FBLA. My classes consist of English, Math, Chemistry, Spanish, and AP CSP (Computer Science Principles). I decided to select CSP because of my interest in programming, web development, and cybersecurity.
+<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I’ve lived in many places, starting from Missouri to Texas to San Diego. I have two sisters, one older and one younger. My Dad, Mom, and grandma also live in our house. In my free time, I like to play basketball, code websites, and play CTFs. </p>
+      </div>
     </div>
     <div class="page animated project">
       <header class="text">
         <p class="title">Projects</p>
         <p class="subtitle">2015 - 2019</p>
       </header>
+      <div class="grid">
+        <div class="box">
+          <img src="css/images/box-1.png">
+          <p class="expand"><a href="https://daniel-ji.github.io/Accuracy-Accounting-Firm/" target="_blank">FBLA 2019 - Website Design</a></p>
+        </div>
+        <div class="box">
+          <img src="css/images/box-2.png">
+          <p class="expand"><a href="https://wolf-corp.github.io/PassionProject1/index.html" target="_blank">8th grade Passion Project</a></p>
+        </div>
+        <div class="box">
+          <img src="css/images/box-3.png">
+          <p class="expand"><a href="https://picoctf.com" target="_blank">picoCTF 2019</a></p>
+        </div>
+        <div class="box">
+          <img src="css/images/box-4.png">
+          <p class="expand"><a href="https://wolf-corp.github.io/Revolution/" target="_blank">Informational Bitcoin Website</a></p>
+        </div>
+      </div>
     </div>
     <div class="page animated resume">
       <header class="text">
         <p class="title">Résumé</p>
-        <p class="subtitle"></p>
       </header>
+      <p class="content">Daniel Ji<br>
+      High School Student<br>
+      ·<br>
+      jidaniel1234@gmail.com<br>
+      ·<br>
+      (626) 667-4559<br>
+      ·<br>
+      400 Pierre Rd Walnut, CA, 91789<br>
+      EDUCATION<br>
+      WALNUT HIGH SCHOOL<br>
+      GPA: 4.0<br>
+      Walnut, CA<br>
+      High School Diploma (Expected graduation May 2022)<br>
+      Relevant Coursework<br>
+      · AP CSP<br>
+      · AP Calculus AB<br>
+      Awards & Honors<br>
+      · FBLA - Website Design 2019 - State 4th<br>
+      · Wolf Corp Regionals Finalist<br>
+      · Cybersecurity 7th Place Silver Division<br>
+      Extracurricular Activities<br>
+      · Cybersecurity Team<br>
+      · JV Basketball Team<br>
+      · Robotics Team<br>
+      · Math Tutoring @ Church<br>
+      · FBLA<br><br>
+      BIOINFORMATICS WEB DEVELOPER INTERN (UNPAID)<br>
+      City of Hope, Duarte, CA / Aug 2019 – Present<br></p>
     </div>
     <div class="page animated contact">
       <header class="text">
-        <p class="title">Contact</p>
+        <p class="title">Contact Me!</p>
         <p class="subtitle"></p>
       </header>
+      <form method="post" action="php/contact.php" onsubmit="return validateEmail()" name="contactForm" class="contactForm" target="decoy">
+        <input class="nameinput" type="text" name="name" placeholder="Name">
+        <input class="emailinput" type="email" name="email" placeholder="Email">
+        <input class="subjectinput" type="text" name="subject" placeholder="Subject">
+        <textarea class="messageinput" rows="1000" name="message" placeholder="Message"></textarea><br>
+        <div class="confirmArea">
+          <input style="border-radius: 1px!important" class="sendinputs" type="submit" name="submit" value="Send">
+          <img defer alt="send message" title="send message" class="animated fadeIn sent checkkmarkc" src="css/images/sent.png"></img>
+        </div>
+      </form>
     </div>
   </div>
 
@@ -69,6 +135,7 @@
   <script src="js/three.min.js"></script>
   <script src="js/vanta.net.min.js"></script>
   <script src="js/particles.min.js"></script>
-  <script defer src="js/main.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/validateForm.js"></script>
 </body>
 </html>
