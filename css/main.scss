@@ -67,7 +67,7 @@ canvas {
     a {
       filter: invert(1);
     }
-    
+
     img {
       margin: 0 0 3vh 3vw;
       height: 5vh;
@@ -109,6 +109,9 @@ canvas {
 
 .home {
   padding-top: 20vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 
   .profile {
     position: relative;
@@ -120,7 +123,14 @@ canvas {
   }
 
   .text {
-    height: 20vw;
+    height: 12vw;
+  }
+  .images {
+    width: 35vw;
+
+    img {
+      width: 10vw;
+    }
   }
 }
 
